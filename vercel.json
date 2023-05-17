@@ -12,6 +12,10 @@
     {
       "source": "/get/home",
       "destination": "/server.js"
+    },
+   {
+      "source": "/get",
+      "destination": "/server.js"
     }
   ]
 }
