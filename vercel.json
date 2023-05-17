@@ -1,0 +1,17 @@
+{
+    "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "cleanUrls":true,
+  "trailingSlash":false,
+  "rewrites":
+  [
+    {
+      "source": "/get/home",
+      "destination": "/server.js"
+    }
+  ]
+}
