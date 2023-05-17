@@ -31,6 +31,15 @@ const files = mongoose.model(process.env.DB_NAME);
       res.send({ status: "erreur" });
     }
   });
+app.get("/get", async (req, res) => {
+    try {
+      await files.find({}).then((data) => {
+        res.send({ data: data });
+      });
+    } catch (error) {
+      res.send({ status: "erreur" });
+    }
+  }); 
 
 app.listen(listenPort, () => {
   console.log("server started port "+listenPort);
